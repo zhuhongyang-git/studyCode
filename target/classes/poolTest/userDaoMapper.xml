@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>    
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+ 
+<mapper namespace="poolTest.dao.UserDao">  
+<!-- XML中只需resultType属性值为实体对象别名或全路径名。 
+mybatis会通过接口文件的返回值类型来判断返回的是集合还是对象。如果是对象，则按常规查询并返回；如果是List集合，mybatis则会将查询到的多条记录设置进集合中并返回。 -->
+    <select id="findCount"  resultType="poolTest.bean.User">  
+        select * from userInFo
+    </select>  
+    <insert id="add" parameterType="poolTest.bean.User">
+		insert into userInFo (userName,userSex) values (#{userName},#{userSex})
+	</insert>
+</mapper>  

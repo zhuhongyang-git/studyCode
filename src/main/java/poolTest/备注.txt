@@ -1,0 +1,11 @@
+1.测试mysql连接
+	src/test/java/poolTest/PoolTest.java
+
+2.测试redis连接
+	src/test/java/poolTest/testSpringRedis.java
+
+3.测试redis登陆限制
+	src/main/java/poolTest.controller/UserController.java
+
+4.redis工具类
+	src/main/java/poolTest.redis
